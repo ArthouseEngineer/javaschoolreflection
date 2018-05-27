@@ -42,8 +42,5 @@ public class TestClass1 {
         this.field3 = field3;
     }
 
-    public String getSomethingField() {
-        return "Some" + field2;
-    }
 
 }
