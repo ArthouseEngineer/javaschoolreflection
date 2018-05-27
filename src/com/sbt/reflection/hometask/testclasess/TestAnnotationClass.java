@@ -35,6 +35,10 @@ public class TestAnnotationClass {
         this.field3 = field3;
     }
 
+    public String getSomeStr(){
+        return field1 + "Bla bla bla";
+    }
+
     public TestAnnotationClass(int field1, String field2, long field3) {
 
         this.field1 = field1;

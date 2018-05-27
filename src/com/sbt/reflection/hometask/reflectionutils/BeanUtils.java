@@ -74,7 +74,7 @@ public class BeanUtils {
      * @param to   Объект чьй свойства необходимо установить.
      * @param from Объект со свойствами которые будут использованы для получения значений.
      */
-    public static boolean assign(Object to, Object from) {
+    public static void assign(Object to, Object from) {
         Map<String, Method> allGettersMap = getAllGetters(from);
         Map<String, Method> allSettersMap = getAllSetters(to);
 
@@ -89,14 +89,12 @@ public class BeanUtils {
                 if (isCompatible(setterType, getterType)) {
                     try {
                         setter.invoke(to, getter.invoke(from));
-                        return true;
                     } catch (IllegalAccessException | InvocationTargetException e) {
                         throw new RuntimeException("Исключение во время рефлексивного доступа к методу!");
                     }
                 }
             }
         }
-        return false;
     }
 }
 
