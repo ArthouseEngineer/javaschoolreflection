@@ -6,9 +6,9 @@ import com.sbt.reflection.hometask.annotations.*;
 public class TestAnnotationClass {
     private int field1;
     private String field2;
-    private Date field3;
+    private long field3;
 
-    @Skip
+
     public int getField1() {
         return field1;
     }
@@ -27,15 +27,15 @@ public class TestAnnotationClass {
     }
 
     @Skip
-    public Date getField3() {
+    public long getField3() {
         return field3;
     }
 
-    public void setField3(Date field3) {
+    public void setField3(long field3) {
         this.field3 = field3;
     }
 
-    public TestAnnotationClass(int field1, String field2, Date field3) {
+    public TestAnnotationClass(int field1, String field2, long field3) {
 
         this.field1 = field1;
         this.field2 = field2;
